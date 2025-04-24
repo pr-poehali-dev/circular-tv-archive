@@ -1,14 +1,18 @@
-// Update this page (the content is just a fallback if you fail to update the page)
 
-const Index = () => {
+import { Link } from 'react-router-dom'
+
+export default function Index() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
+    <div className="flex flex-col min-h-screen items-center justify-center bg-gray-100 p-4">
+      <h1 className="text-3xl font-bold mb-6">Добро пожаловать!</h1>
+      <div className="flex flex-col gap-4">
+        <Link 
+          to="/circular" 
+          className="py-2 px-4 bg-[#9b87f5] text-white rounded-md hover:bg-[#7E69AB] transition-colors"
+        >
+          Телеканал Циркуляр
+        </Link>
       </div>
     </div>
-  );
-};
-
-export default Index;
+  )
+}
